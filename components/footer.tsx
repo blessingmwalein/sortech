@@ -1,10 +1,21 @@
 import Link from "next/link"
 import { Facebook, Instagram, Linkedin } from "lucide-react"
+import Image from "next/image"
+import { PatternBackground } from "./ui/pattern-background"
 
 export default function Footer() {
   return (
-    <footer className="bg-teal text-white py-12">
-      <div className="container px-4 md:px-6">
+    <footer className="text-white py-12 relative">
+      {/* Background pattern */}
+      <div className="absolute inset-0 z-0">
+        <PatternBackground
+          spacing={20}  // Customize the spacing as you need
+          backgroundColor="#008080"  // Or another color you prefer
+          vectorColor="#E0F2F2"  // Customize the vector color
+        />
+      </div>
+
+      <div className="container px-4 md:px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>
@@ -79,21 +90,28 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-white/20">
+        <div className="mt-8 pt-4 border-t border-white/40">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-2xl font-bold mb-4 md:mb-0">
-              <span>sortech</span>
+            <div className="md:mb-0">
+              <Link href="/" className="flex items-center">
+                <Image
+                  src="/sortech-logos/s-logo-white.png"
+                  alt="Modern home with smart technology"
+                  width={200}
+                  height={70}
+                />
+              </Link>
             </div>
             <div className="flex space-x-4">
-              <Link href="https://facebook.com" className="hover:text-teal-light">
+              <Link href="https://facebook.com" className="hover:text-teal-light border-2 border-white rounded-full p-2">
                 <Facebook className="h-6 w-6" />
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="https://instagram.com" className="hover:text-teal-light">
+              <Link href="https://instagram.com" className="hover:text-teal-light border-2 border-white rounded-full p-2">
                 <Instagram className="h-6 w-6" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="https://linkedin.com" className="hover:text-teal-light">
+              <Link href="https://linkedin.com" className="hover:text-teal-light border-2 border-white rounded-full p-2">
                 <Linkedin className="h-6 w-6" />
                 <span className="sr-only">LinkedIn</span>
               </Link>

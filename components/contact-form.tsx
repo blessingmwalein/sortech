@@ -27,8 +27,9 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="flex flex-col md:flex-row rounded-lg overflow-hidden">
-      <div className="bg-teal p-8 md:w-1/2">
+    <div className="relative flex flex-col md:flex-row rounded-[30px] overflow-visible bg-teal-light/30 pt-20 mb-20">
+      {/* Form Card */}
+      <div className="absolute -top-16 left-0 md:left-10 md:w-1/3 bg-teal p-8 rounded-[30px] shadow-lg z-10">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <input
@@ -76,15 +77,17 @@ export default function ContactForm() {
           </div>
           <Button
             type="submit"
-            className="w-full bg-white text-teal hover:bg-teal-light hover:text-white transition-colors rounded-full"
+            className="w-full text-lg bg-white text-teal py-8 hover:bg-teal-light hover:text-white transition-colors rounded-full"
           >
             SEND MESSAGE
           </Button>
         </form>
       </div>
-      <div className="bg-teal-light/30 p-8 md:w-1/2 flex flex-col justify-center">
-        <h3 className="text-lg text-teal mb-2">Let's Work Together</h3>
-        <h2 className="text-3xl font-bold mb-4">
+
+      {/* Message Section */}
+      <div className="p-8 ml-10 md:ml-auto md:w-1/2 flex flex-col justify-center">
+        <h3 className="text-2xl text-teal mb-2">Let's Work Together</h3>
+        <h2 className="text-6xl font-bold mb-4">
           Send Us
           <br />A Message
           <br />
@@ -92,5 +95,6 @@ export default function ContactForm() {
         </h2>
       </div>
     </div>
+
   )
 }

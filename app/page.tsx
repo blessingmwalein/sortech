@@ -6,12 +6,16 @@ import { ArrowRight, LightbulbIcon, ShieldIcon, BarChart3Icon } from "lucide-rea
 import LearnIcon from "@/components/icons/learn_icon"
 import GrowthIcon from "@/components/icons/growth_icon"
 import EvolveIcon from "@/components/icons/evolve_icon"
+import { PatternBackground } from "@/components/ui/pattern-background"
+import NumberCard from "@/components/ui/number-card"
+import SectionTitle from "@/components/ui/section-title"
+import PartnersSlider from "@/components/ui/partner-slider"
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="pb-40 px-5 relative z-10">
+      <section className="pb-40 m-8 relative z-10">
         <div className="relative h-[600px] rounded-[30px] overflow-hidden">
           <div className="absolute inset-0 bg-[#000000B2] z-10" />
           <Image
@@ -34,7 +38,7 @@ export default function Home() {
       </section>
 
       {/* Features Section with Overlap */}
-      <section className="-mt-48 relative z-20 px-4 md:px-6">
+      <section className="-mt-60 relative z-20 px-4 md:px-6">
         <div className="flex flex-wrap justify-center gap-6 container">
           {[
             {
@@ -65,7 +69,7 @@ and communities we serve.`
           ].map(({ icon, title, text }, index) => (
             <div
               key={index}
-              className="bg-teal w-[300px] p-6 rounded-[30px] text-white flex flex-col items-center text-center shadow-lg border-4 border-white"
+              className="bg-brand-teal w-[300px] p-6 rounded-[30px] text-white flex flex-col items-center text-center shadow-lg border-4 border-white"
             >
               {icon}
               <h3 className="text-xl font-bold mb-2 mt-1">{title}</h3>
@@ -79,18 +83,18 @@ and communities we serve.`
 
       {/* About Section */}
       <section className="py-12 container px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="relative h-[400px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div className="relative h-[500px] rounded-[30px]">
             <Image
-              src="/placeholder.svg?height=400&width=600"
+              src="/background/home_who.jpg"
               alt="Smart home interface"
-              width={600}
-              height={400}
-              className="object-cover w-full h-full rounded-lg"
+              width={700}
+              height={500}
+              className="object-cover w-full h-full rounded-[30px]"
             />
           </div>
-          <div>
-            <h2 className="text-2xl font-bold mb-4">
+          <div className="ml-6">
+            <h2 className="text-5xl font-bold mb-8">
               Who We Are
               <br />
               And What You
@@ -98,11 +102,9 @@ and communities we serve.`
               Get From Us
             </h2>
             <p className="text-gray-600 mb-6">
-              We specialize in cyber security, data privacy, home automation solutions and infrastructure management
-              services. With the ever-changing technology landscape, our youthful team is geared to face the challenges
-              and help our customers simplify their everyday living.
+              We specialize in cyber security, data privacy, home automation solutions and infrastructure management services.
             </p>
-            <Button className="bg-white text-teal border border-teal hover:bg-teal hover:text-white rounded-full">
+            <Button className=" mt-4 bg-white text-teal border-2 border-teal hover:bg-brand-teal hover:text-white rounded-full py-6 px-8 text-[18px]">
               Learn More
             </Button>
           </div>
@@ -112,30 +114,33 @@ and communities we serve.`
       {/* Product Categories */}
       <section className="py-12 bg-gray-50">
         <div className="container px-4 md:px-6">
-          <h2 className="text-2xl font-bold mb-2">
-            Product <span className="text-gray-400">Categories</span>
-          </h2>
+          <h4 className="text-lg font-normal mb-2 text-brand-teal">
+            Our Solutions
+          </h4>
+
+          <SectionTitle title="Product Categories." />
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-            <div className="relative h-[200px] rounded-lg overflow-hidden group">
+            <div className="relative h-[400px] rounded-[30px] overflow-hidden group">
               <Image
-                src="/placeholder.svg?height=200&width=400"
+                src="/background/home_automation.jpg"
                 alt="Home Automation"
                 width={400}
-                height={200}
+                height={400}
                 className="object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-black/50 flex items-end p-4">
                 <Link
                   href="/solutions/home-automation"
-                  className="bg-black/70 text-white px-4 py-2 rounded-full text-sm group-hover:bg-teal transition-colors"
+                  className="bg-transparent border-white border-2 text-white px-4 py-3 rounded-full text-base group-hover:bg-brand-teal transition-colors"
                 >
                   Home Automation <ArrowRight className="h-4 w-4 inline ml-1" />
                 </Link>
               </div>
             </div>
-            <div className="relative h-[200px] rounded-lg overflow-hidden group">
+            <div className="relative h-[400px] rounded-[30px] overflow-hidden group">
               <Image
-                src="/placeholder.svg?height=200&width=400"
+                src="/background/enterprice-security.jpg"
                 alt="Enterprise Security"
                 width={400}
                 height={200}
@@ -144,15 +149,15 @@ and communities we serve.`
               <div className="absolute inset-0 bg-black/50 flex items-end p-4">
                 <Link
                   href="/solutions/enterprise-security"
-                  className="bg-black/70 text-white px-4 py-2 rounded-full text-sm group-hover:bg-teal transition-colors"
+                  className="bg-transparent border-white border-2 text-white px-4 py-3 rounded-full text-base group-hover:bg-brand-teal transition-colors"
                 >
                   Enterprise Security <ArrowRight className="h-4 w-4 inline ml-1" />
                 </Link>
               </div>
             </div>
-            <div className="relative h-[200px] rounded-lg overflow-hidden group">
+            <div className="relative h-[400px] rounded-[30px] overflow-hidden group">
               <Image
-                src="/placeholder.svg?height=200&width=400"
+                src="/background/obser.jpg"
                 alt="Observability and Resilience"
                 width={400}
                 height={200}
@@ -161,7 +166,7 @@ and communities we serve.`
               <div className="absolute inset-0 bg-black/50 flex items-end p-4">
                 <Link
                   href="/solutions/observability-resilience"
-                  className="bg-black/70 text-white px-4 py-2 rounded-full text-sm group-hover:bg-teal transition-colors"
+                  className="bg-transparent border-white border-2 text-white px-4 py-3 rounded-full text-base group-hover:bg-brand-teal transition-colors"
                 >
                   Observability and Resilience <ArrowRight className="h-4 w-4 inline ml-1" />
                 </Link>
@@ -173,36 +178,40 @@ and communities we serve.`
 
       {/* Services Section */}
       <section className="py-12 container px-4 md:px-6">
-        <h2 className="text-2xl font-bold mb-8">
-          Your Home. <span className="font-normal">Simplified.</span>
-        </h2>
+        <h4 className="text-lg font-normal mb-2 text-brand-teal">
+          Service Offering
+        </h4>
+        <SectionTitle title="Your Home. Simplified." />
+
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="bg-teal p-6 rounded-lg text-white">
-            <h3 className="text-3xl font-bold mb-2">01</h3>
-            <p className="text-sm">Observability Platform Engineering</p>
-          </div>
-          <div className="bg-teal p-6 rounded-lg text-white">
-            <h3 className="text-3xl font-bold mb-2">02</h3>
-            <p className="text-sm">Data Privacy Consulting</p>
-          </div>
-          <div className="bg-teal p-6 rounded-lg text-white">
-            <h3 className="text-3xl font-bold mb-2">03</h3>
-            <p className="text-sm">Cyber Security Consulting</p>
-          </div>
-          <div className="bg-teal p-6 rounded-lg text-white">
-            <h3 className="text-3xl font-bold mb-2">04</h3>
-            <p className="text-sm">Technical Support And Advisory</p>
-          </div>
+
+          <NumberCard
+            number="01"
+            label="Observability Platform Engineering"
+          />
+          <NumberCard
+            number="02"
+            label="Data Privacy Consulting"
+          />
+          <NumberCard
+            number="03"
+            label="Cyber Security Consulting"
+          />
+          <NumberCard
+            number="04"
+            label="Technical Support And Advisory"
+          />
+
         </div>
       </section>
 
       {/* Industries Section */}
-      <section className="py-12 bg-teal-light/20">
-        <div className="container px-4 md:px-6">
-          <h2 className="text-2xl font-bold mb-8">
-            Industries <span className="text-gray-500">Served</span>
-          </h2>
-          <div className="flex flex-wrap gap-4 justify-center">
+      <section className="py-12 bg-[#DAE9E9]">
+        <div className="container px-4 md:px-6 py-6">
+
+          <SectionTitle title="Industries Served." />
+
+          <div className="flex flex-wrap gap-4 justify-center mt-6">
             {[
               "Banking & Finance",
               "Telecommunications",
@@ -214,7 +223,7 @@ and communities we serve.`
               "Energy and Utilities",
               "Healthcare",
             ].map((industry) => (
-              <div key={industry} className="bg-teal-light/30 px-4 py-2 rounded-full text-teal text-sm">
+              <div key={industry} className="bg-[#B7D3D3] px-4 py-2 rounded-full text-black text-lg">
                 {industry}
               </div>
             ))}
@@ -223,24 +232,7 @@ and communities we serve.`
       </section>
 
       {/* Partners Section */}
-      <section className="py-12 container px-4 md:px-6">
-        <h2 className="text-2xl font-bold mb-8">
-          Our Partners <span className="text-gray-500">They Trust Us</span>
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[1, 2, 3, 4].map((partner) => (
-            <div key={partner} className="border p-6 rounded-lg flex items-center justify-center h-32">
-              <Image
-                src="/placeholder.svg?height=80&width=160"
-                alt={`Partner ${partner}`}
-                width={160}
-                height={80}
-                className="object-contain"
-              />
-            </div>
-          ))}
-        </div>
-      </section>
+      <PartnersSlider />
 
       {/* Contact Section */}
       <section className="py-12 container px-4 md:px-6">

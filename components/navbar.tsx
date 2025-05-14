@@ -17,19 +17,18 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white py-4">
-      <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center">
-          <div className="text-teal text-2xl font-bold">
-            {/* react logo Image */}
-            <Image
-              src="/logos/d_logo.jpg"
-              alt="Modern home with smart technology"
-              width={200}
-              height={62}
-              className=""
-            />
-          </div>
+      <div className="w-full max-w-screen-2xl flex h-16 items-center justify-between px-0">
+        {/* Logo */}
+        <Link href="/" className=" flex items-center">
+          <Image
+            src="/sortech-logos/s-logo-teal.png"
+            alt="Modern home with smart technology"
+            width={270}
+            height={100}
+          />
         </Link>
+
+        {/* Desktop Nav Links */}
         <nav className="flex-1 hidden md:flex justify-end gap-6 mr-6">
           <Link
             href="/"
@@ -56,12 +55,16 @@ export default function Navbar() {
             Contact Us
           </Link>
         </nav>
-        <div className="flex items-center justify-end gap-4">
+
+        {/* Get Quote + Mobile Menu */}
+        <div className="flex items-center justify-end gap-4 mr-4">
           <Link href="/contact-us">
-            <Button className="rounded-full bg-white text-teal border-2 border-teal hover:bg-teal hover:text-white py-6 px-8 text-[18px]">
+            <Button className="mr-2 rounded-full bg-white text-teal border-2 border-teal hover:bg-teal hover:text-white py-6 px-8 text-[18px]">
               Get Quote
             </Button>
           </Link>
+
+          {/* Mobile Menu Sheet */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="md:hidden">
               <Button variant="outline" size="icon" className="md:hidden">
@@ -108,5 +111,6 @@ export default function Navbar() {
         </div>
       </div>
     </header>
+
   )
 }
