@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="pb-40 m-8 relative z-10">
+      <section className="container pb-40 m-8 relative z-10">
         <div className="relative h-[600px] rounded-[30px] overflow-hidden">
           <div className="absolute inset-0 bg-[#000000B2] z-10" />
           <Image
@@ -38,8 +38,8 @@ export default function Home() {
       </section>
 
       {/* Features Section with Overlap */}
-      <section className="-mt-60 relative z-20 px-4 md:px-6">
-        <div className="flex flex-wrap justify-center gap-6 container">
+      <section className="container -mt-60 relative z-20 px-4 md:px-6">
+        <div className="flex flex-wrap justify-center gap-6 ">
           {[
             {
               icon: <LearnIcon />,
@@ -112,8 +112,8 @@ and communities we serve.`
       </section>
 
       {/* Product Categories */}
-      <section className="py-12 bg-gray-50">
-        <div className="container px-4 md:px-6">
+      <section className="container py-12 bg-gray-50">
+        <div className=" px-4 md:px-6">
           <h4 className="text-lg font-normal mb-2 text-brand-teal">
             Our Solutions
           </h4>
@@ -235,7 +235,7 @@ and communities we serve.`
       <PartnersSlider />
 
       {/* Contact Section */}
-      <section className="py-12 container px-4 md:px-6">
+      <section className="py-12  px-4 md:px-6">
         <ContactForm />
       </section>
     </div>

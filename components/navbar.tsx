@@ -16,8 +16,8 @@ export default function Navbar() {
   const isActive = (path: string) => pathname === path
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white py-4">
-      <div className="w-full max-w-screen-2xl flex h-16 items-center justify-between px-0">
+    <header className="sticky top-0 z-50 w-full bg-white py-4 ">
+      <div className="w-full max-w-screen-2xl flex h-16 items-center justify-between px-0 container">
         {/* Logo */}
         <Link href="/" className=" flex items-center">
           <Image

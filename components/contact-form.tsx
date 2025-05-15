@@ -29,7 +29,7 @@ export default function ContactForm() {
   return (
     <div className="relative flex flex-col md:flex-row rounded-[30px] overflow-visible bg-teal-light/30 pt-20 mb-20">
       {/* Form Card */}
-      <div className="absolute -top-16 left-0 md:left-10 md:w-1/3 bg-teal p-8 rounded-[30px] shadow-lg z-10">
+      <div className="absolute -top-14 left-0 md:left-10 md:w-1/3 bg-teal p-8 rounded-[30px] shadow-lg z-10">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <input
