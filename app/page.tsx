@@ -30,15 +30,15 @@ export default function Home() {
       <section className="container pb-40 m-8 relative z-10">
         <div className="relative h-[600px] rounded-[30px] overflow-hidden">
           <div className="absolute inset-0 bg-[#000000B2] z-10" />
-            <AnimatedImage
+          <AnimatedImage
             src="/background/home_back_1.jpg"
             alt="Modern home with smart technology"
             className="w-full h-full"
             imageClassName="w-full h-full object-cover" // important
             effect="zoom-in"
-            duration={1.5} width={0} height={0}  
-            
-            />
+            duration={1.5} width={0} height={0}
+
+          />
           <div className="absolute inset-0 z-20 flex flex-col justify-center items-center text-center px-4 md:px-6">
             <AnimatedWords
               text="Simplifying Your Everyday Living"
@@ -73,40 +73,30 @@ export default function Home() {
       </section>
       {/* Features Section with Overlap */}
       <section className="container -mt-60 relative z-20 px-4 md:px-6">
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-row flex-wrap justify-center gap-6">
           {[
             {
               icon: <LearnIcon />,
               title: "Learn",
-              text: `We believe in continuous
-learning. There are always new
-ways to approaching our
-customers' everyday problems.`,
+              text: `We believe in continuous learning. There are always new ways to approach our customers' everyday problems.`,
               delay: 0.1,
             },
             {
               icon: <GrowthIcon />,
               title: "Growth",
-              text: `Our approach is centered on
-sustainable, customer-centric
-growth, where we work together
-with our customers to achieve
-shared goals.`,
+              text: `Our approach is centered on sustainable, customer-centric growth, where we work together with our customers to achieve shared goals.`,
               delay: 0.3,
             },
             {
               icon: <EvolveIcon />,
               title: "Evolve",
-              text: `Through continuous learning and growth, we aim to enhance
-our own capabilities and make a
-positive impact on the markets
-and communities we serve.`,
+              text: `Through continuous learning and growth, we aim to enhance our own capabilities and make a positive impact on the markets and communities we serve.`,
               delay: 0.5,
             },
           ].map(({ icon, title, text, delay }, index) => (
             <AnimatedSection key={index} type="fade-up" delay={delay}>
               <AnimatedCard
-                className="bg-brand-teal w-[300px] p-6 rounded-[30px] text-white flex flex-col items-center text-center shadow-lg border-4 border-white"
+                className="bg-brand-teal sm:w-[280px] md:w-[300px] p-6 rounded-[30px] text-white flex flex-col items-center text-center shadow-lg border-4 border-white"
                 hoverEffect="lift"
               >
                 {icon}
@@ -117,6 +107,7 @@ and communities we serve.`,
           ))}
         </div>
       </section>
+
       {/* Stats Counter Section */}
       <AnimatedSection type="fade-up" className="py-16 container px-4 md:px-6">
         <StatsCounter />
@@ -224,7 +215,7 @@ and communities we serve.`,
                 services.
               </p>
               <AnimatedButton
-                 onClick={ () => router.push('/about-us')}
+                onClick={() => router.push('/about-us')}
                 className="mt-4 bg-white text-teal border-2 border-teal hover:bg-brand-teal hover:text-white rounded-full py-6 px-8 text-[18px]"
                 hoverEffect="fill"
               >
