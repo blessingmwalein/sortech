@@ -9,6 +9,7 @@ import AnimatedWords from "@/components/ui/animated-words"
 import AnimatedImage from "@/components/ui/animated-image"
 import AnimatedCard from "@/components/ui/animated-card"
 import CTABanner from "@/components/ui/cta-banner"
+import { PatternBackground } from "@/components/ui/pattern-background"
 
 type ServiceItem = {
   id: number
@@ -56,7 +57,16 @@ export default function EnterpriseSecurity() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section - Keeping the original structure */}
-      <section className="relative h-[500px] w-full">
+      <section className="relative h-[300px] md:h-[500px] w-full overflow-hidden">
+        {/* Pattern background overlay for branding */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <PatternBackground
+            spacing={40}
+            backgroundColor="transparent"
+            vectorColor="#E0F2F2"
+            style={{ opacity: 0.22 }}
+          />
+        </div>
         <div className="absolute inset-0 bg-black/50 z-10" />
         <AnimatedImage
           src="/background/security_back.jpg"
@@ -65,29 +75,41 @@ export default function EnterpriseSecurity() {
           height={500}
           className="w-full h-full"
           imageClassName="w-full h-full object-cover"
-          effect="zoom-in"
+          effect="parallax"
+          parallaxStrength={7}
           duration={1.5}
         />
         <PageHero subtitle="Sortech" title="Enterprise Security" buttonText="Learn More" />
       </section>
 
       {/* Options Section - Enhanced with animations */}
-      <section className="py-16 container px-4 md:px-6">
-        <AnimatedSection type="fade-up">
-          <div className="text-center mb-16">
-            <SectionTitle title="Enterprise Security Solutions" />
-            <AnimatedWords
-              text="Comprehensive security solutions to protect your business from evolving cyber threats"
-              className="text-gray-600 mt-4 max-w-3xl mx-auto"
-              delay={0.2}
-              staggerDelay={0.01}
-            />
-          </div>
-        </AnimatedSection>
+      <section className="py-12 md:py-16 container px-2 md:px-6 relative overflow-hidden">
+        {/* Pattern background overlay for branding */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <PatternBackground
+            spacing={50}
+            backgroundColor="transparent"
+            vectorColor="#B7D3D3"
+            style={{ opacity: 0.13 }}
+          />
+        </div>
+        <div className="relative z-10">
+          <AnimatedSection type="fade-up">
+            <div className="text-center mb-16">
+              <SectionTitle title="Enterprise Security Solutions" />
+              <AnimatedWords
+                text="Comprehensive security solutions to protect your business from evolving cyber threats"
+                className="text-gray-600 mt-4 max-w-3xl mx-auto"
+                delay={0.2}
+                staggerDelay={0.01}
+              />
+            </div>
+          </AnimatedSection>
 
-        <AnimatedSection type="fade-up" delay={0.3}>
-          <ServicesAccordion items={services} />
-        </AnimatedSection>
+          <AnimatedSection type="fade-up" delay={0.3}>
+            <ServicesAccordion items={services} />
+          </AnimatedSection>
+        </div>
       </section>
 
       {/* Detailed Solutions Section - New section with more details */}

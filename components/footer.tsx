@@ -5,20 +5,20 @@ import { PatternBackground } from "./ui/pattern-background"
 
 export default function Footer() {
   return (
-    <footer className="text-white py-12 relative">
+    <footer className="text-white py-8 relative bg-brand-teal">
       {/* Background pattern */}
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         <PatternBackground
           spacing={20}  // Customize the spacing as you need
           backgroundColor="#008080"  // Or another color you prefer
           vectorColor="#E0F2F2"  // Customize the vector color
         />
-      </div>
+      </div> */}
 
       <div className="container px-4 md:px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div>
-            <h3 className="text-lg font-semibold mb-4">Solutions</h3>
+            <h3 className="text-base font-semibold mb-3">Solutions</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/solutions/home-automation" className="hover:underline">
@@ -38,8 +38,8 @@ export default function Footer() {
             </ul>
           </div>
           <div className="col-span-2">
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="grid grid-cols-2 gap-2">
+            <h3 className="text-base font-semibold mb-3">Services</h3>
+            <ul className="grid grid-cols-2 gap-2 text-sm">
               <li>
                 <Link href="/services/observability-platform" className="hover:underline">
                   Observability platform engineering
@@ -63,9 +63,9 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <div className="mb-6">
-              <h3 className="text-lg font-semibold mb-4">Resources</h3>
-              <ul className="space-y-2">
+            <div className="mb-4">
+              <h3 className="text-base font-semibold mb-3">Resources</h3>
+              <ul className="space-y-2 text-sm">
                 <li>
                   <Link href="/resources/whitepapers" className="hover:underline">
                     6.1 Whitepapers

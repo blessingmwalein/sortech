@@ -6,7 +6,8 @@
 
 body {
   font-family: 'Montserrat', sans-serif !important;
-
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 
@@ -140,18 +141,18 @@ body {
   }
 
   .text-40px {
-    font-size: 40px;
+    font-size: 28px;
   }
 
   .text-35px {
-    font-size: 30px;
+    font-size: 22px;
   }
 
   .heading-1 {
     /* font-family: 'Montserrat', sans-serif; */
     font-weight: 700;
-    font-size: 120px;
-    line-height: 124px;
+    font-size: 72px;
+    line-height: 76px;
     letter-spacing: 0;
     text-align: center;
     color: white;
@@ -159,17 +160,71 @@ body {
   }
 
   .button-text-nomal {
-    font-size: 25px;
+    font-size: 16px;
   }
 
   .nav-text-selected {
     color: var(--brand-teal);
-    font-size: 20px;
+    font-size: 16px;
 
   }
 
   .nav-text-unselected {
     color: #00000073;
+    font-size: 16px;
+  }
+
+  /* Normalized heading classes */
+  .heading-xl {
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  .heading-lg {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .heading-md {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .heading-sm {
     font-size: 20px;
+    line-height: 24px;
+  }
+
+  /* Normalized text sizes */
+  .text-small {
+    font-size: 12px;
+  }
+
+  .text-normal {
+    font-size: 14px;
+  }
+
+  .text-medium {
+    font-size: 16px;
+  }
+
+  .text-large {
+    font-size: 18px;
+  }
+
+  /* Reduced spacing utilities */
+  .container-tight {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .section-spacing {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .section-spacing-sm {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }

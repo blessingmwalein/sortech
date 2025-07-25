@@ -43,19 +43,19 @@ export default function Solutions() {
                   effect="zoom-in"
                   duration={1.2}
                 />
-                <div className="absolute inset-0 bg-black/50 flex items-center p-8">
+                <div className="absolute inset-0 bg-black/50 flex items-center p-6">
                   <AnimatedWords
                     text="Home Automation"
                     tag="h2"
-                    className="text-3xl md:text-4xl font-bold text-white"
+                    className="text-2xl md:text-3xl font-bold text-white"
                     delay={0.3}
                     staggerDelay={0.02}
                   />
                 </div>
                 <div className="absolute bottom-4 right-4">
                   <Link href="/solutions/home-automation">
-                    <Button className="w-12 h-12 flex items-center justify-center rounded-full bg-white text-black hover:bg-brand-teal hover:text-white transition-all duration-300 transform hover:scale-110">
-                      <ArrowRight className="h-8 w-8" />
+                    <Button className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-brand-teal hover:text-white transition-all duration-300 transform hover:scale-110">
+                      <ArrowRight className="h-6 w-6" />
                     </Button>
                   </Link>
                 </div>
@@ -64,7 +64,7 @@ export default function Solutions() {
 
             {/* Enterprise Security */}
             <AnimatedSection type="fade-up" delay={0.3}>
-              <div className="relative h-[300px] w-full overflow-hidden rounded-[20px]">
+              <div className="relative h-[280px] w-full overflow-hidden rounded-[20px]">
                 <AnimatedImage
                   src="/background/enterprice_1.jpg"
                   alt="Enterprise Security"
@@ -75,19 +75,19 @@ export default function Solutions() {
                   effect="zoom-in"
                   duration={1.2}
                 />
-                <div className="absolute inset-0 bg-black/50 flex items-center p-8">
+                <div className="absolute inset-0 bg-black/50 flex items-center p-6">
                   <AnimatedWords
                     text="Enterprise Security"
                     tag="h2"
-                    className="text-3xl md:text-4xl font-bold text-white"
+                    className="text-2xl md:text-3xl font-bold text-white"
                     delay={0.3}
                     staggerDelay={0.02}
                   />
                 </div>
                 <div className="absolute bottom-4 right-4">
                   <Link href="/solutions/enterprise-security">
-                    <Button className="w-12 h-12 flex items-center justify-center rounded-full bg-white text-black hover:bg-brand-teal hover:text-white transition-all duration-300 transform hover:scale-110">
-                      <ArrowRight className="h-8 w-8" />
+                    <Button className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-brand-teal hover:text-white transition-all duration-300 transform hover:scale-110">
+                      <ArrowRight className="h-6 w-6" />
                     </Button>
                   </Link>
                 </div>
@@ -96,7 +96,7 @@ export default function Solutions() {
 
             {/* Observability And Resilience */}
             <AnimatedSection type="fade-up" delay={0.5}>
-              <div className="relative h-[300px] w-full overflow-hidden rounded-[20px]">
+              <div className="relative h-[280px] w-full overflow-hidden rounded-[20px]">
                 <AnimatedImage
                   src="/background/obser_1.jpg"
                   alt="Observability And Resilience"
@@ -107,11 +107,11 @@ export default function Solutions() {
                   effect="zoom-in"
                   duration={1.2}
                 />
-                <div className="absolute inset-0 bg-black/50 flex items-center p-8">
+                <div className="absolute inset-0 bg-black/50 flex items-center p-6">
                   <AnimatedWords
                     text="Observability And Resilience"
                     tag="h2"
-                    className="text-3xl md:text-4xl font-bold text-white"
+                    className="text-2xl md:text-3xl font-bold text-white"
                     delay={0.3}
                     staggerDelay={0.02}
                   />

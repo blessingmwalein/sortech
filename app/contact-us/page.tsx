@@ -11,82 +11,85 @@ const ContactUs = () => {
   return (
     <>
       {/* Contact Information */}
-      <section className="py-16 container px-4 md:px-6">
-        <AnimatedSection type="fade-up">
-          <div className="text-center mb-12">
-            <SectionTitle title="Get In Touch" />
-            <AnimatedWords
-              text="We're here to help with all your technology needs. Reach out to us through any of the channels below."
-              className="text-gray-600 mt-4 max-w-3xl mx-auto"
-              delay={0.2}
-              staggerDelay={0.01}
-            />
+      <section className="py-12 md:py-16 container px-2 md:px-6 relative overflow-hidden">
+        <div className="relative z-10">
+          <AnimatedSection type="fade-up">
+            <div className="text-center mb-12">
+              <SectionTitle title="Get In Touch" />
+              <AnimatedWords
+                text="We're here to help with all your technology needs. Reach out to us through any of the channels below."
+                className="text-gray-600 mt-4 max-w-3xl mx-auto"
+                delay={0.2}
+                staggerDelay={0.01}
+              />
+            </div>
+          </AnimatedSection>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <AnimatedSection type="fade-up" delay={0.1}>
+              <AnimatedCard className="bg-white p-8 rounded-[25px] shadow-md text-center" hoverEffect="lift">
+                <div className="bg-brand-teal/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="h-8 w-8 text-brand-teal" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Visit Us</h3>
+                <p className="text-gray-600">123 Tech Avenue</p>
+                <p className="text-gray-600">Harare, Zimbabwe</p>
+                <a
+                  href="https://maps.google.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand-teal mt-2 inline-block hover:underline"
+                  aria-label="View map location"
+                >
+                  View on Map
+                </a>
+              </AnimatedCard>
+            </AnimatedSection>
+
+            <AnimatedSection type="fade-up" delay={0.3}>
+              <AnimatedCard className="bg-white p-8 rounded-[25px] shadow-md text-center" hoverEffect="lift">
+                <div className="bg-brand-teal/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Phone className="h-8 w-8 text-brand-teal" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Call Us</h3>
+                <p className="text-gray-600">+263 123 456 789</p>
+                <p className="text-gray-600">+263 987 654 321</p>
+                <p className="text-gray-600 mt-2">Support: +263 456 789 123</p>
+              </AnimatedCard>
+            </AnimatedSection>
+
+            <AnimatedSection type="fade-up" delay={0.5}>
+              <AnimatedCard className="bg-white p-8 rounded-[25px] shadow-md text-center" hoverEffect="lift">
+                <div className="bg-brand-teal/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Mail className="h-8 w-8 text-brand-teal" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Email Us</h3>
+                <p className="text-gray-600">info@sortech.com</p>
+                <p className="text-gray-600">support@sortech.com</p>
+                <p className="text-gray-600 mt-2">sales@sortech.com</p>
+              </AnimatedCard>
+            </AnimatedSection>
           </div>
-        </AnimatedSection>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <AnimatedSection type="fade-up" delay={0.1}>
-            <AnimatedCard className="bg-white p-8 rounded-[25px] shadow-md text-center" hoverEffect="lift">
-              <div className="bg-brand-teal/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="h-8 w-8 text-brand-teal" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Visit Us</h3>
-              <p className="text-gray-600">123 Tech Avenue</p>
-              <p className="text-gray-600">Harare, Zimbabwe</p>
-              <a
-                href="https://maps.google.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-brand-teal mt-2 inline-block hover:underline"
-              >
-                View on Map
-              </a>
-            </AnimatedCard>
-          </AnimatedSection>
-
-          <AnimatedSection type="fade-up" delay={0.3}>
-            <AnimatedCard className="bg-white p-8 rounded-[25px] shadow-md text-center" hoverEffect="lift">
-              <div className="bg-brand-teal/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="h-8 w-8 text-brand-teal" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Call Us</h3>
-              <p className="text-gray-600">+263 123 456 789</p>
-              <p className="text-gray-600">+263 987 654 321</p>
-              <p className="text-gray-600 mt-2">Support: +263 456 789 123</p>
-            </AnimatedCard>
-          </AnimatedSection>
-
-          <AnimatedSection type="fade-up" delay={0.5}>
-            <AnimatedCard className="bg-white p-8 rounded-[25px] shadow-md text-center" hoverEffect="lift">
-              <div className="bg-brand-teal/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="h-8 w-8 text-brand-teal" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Email Us</h3>
-              <p className="text-gray-600">info@sortech.com</p>
-              <p className="text-gray-600">support@sortech.com</p>
-              <p className="text-gray-600 mt-2">sales@sortech.com</p>
-            </AnimatedCard>
-          </AnimatedSection>
         </div>
       </section>
 
       {/* Business Hours */}
-      <section className="py-16 bg-gray-50">
-        <div className="container px-4 md:px-6">
+      <section className="py-12 bg-gray-50 relative overflow-hidden">
+        <div className="container px-2 md:px-6 relative z-10">
           <AnimatedSection type="fade-up">
             <div className="max-w-3xl mx-auto bg-white rounded-[25px] shadow-md overflow-hidden">
-              <div className="p-8">
-                <div className="flex items-center mb-6">
-                  <Clock className="h-8 w-8 text-brand-teal mr-4" />
+              <div className="p-6">
+                <div className="flex items-center mb-4">
+                  <Clock className="h-6 w-6 text-brand-teal mr-3" />
                   <AnimatedText
                     text="Business Hours"
                     tag="h3"
-                    className="text-2xl font-semibold"
+                    className="text-xl font-semibold"
                     delay={0.1}
                     staggerDelay={0.02}
                   />
                 </div>
 
-                <div className="space-y-4 stagger-children">
+                <div className="space-y-3 stagger-children">
                   <div className="flex justify-between items-center pb-2 border-b border-gray-100">
                     <span className="text-gray-700 font-medium">Monday - Friday</span>
                     <span className="text-gray-600">8:00 AM - 5:00 PM</span>
@@ -139,8 +142,8 @@ const ContactUs = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container px-4 md:px-6">
+      <section className="py-16 bg-gray-50 relative overflow-hidden">
+        <div className="container px-2 md:px-6 relative z-10">
           {/* <AnimatedSection type="fade-up">
             <div className="text-center mb-12">
               <SectionTitle title="Frequently Asked Questions" />

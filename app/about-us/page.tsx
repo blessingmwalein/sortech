@@ -10,12 +10,22 @@ import AnimatedCard from "@/components/ui/animated-card"
 import AnimatedImage from "@/components/ui/animated-image"
 import Image from "next/image"
 import Link from "next/link"
+import { PatternBackground } from "@/components/ui/pattern-background"
 
 const AboutUs = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white relative">
       {/* Hero Section with Background Image */}
-      <section className="relative h-[500px] overflow-hidden">
+      <section className="relative h-[300px] md:h-[500px] overflow-hidden">
+        {/* Pattern background overlay for branding */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <PatternBackground
+            spacing={40}
+            backgroundColor="transparent"
+            vectorColor="#E0F2F2"
+            style={{ opacity: 0.22 }}
+          />
+        </div>
         <div className="absolute inset-0 bg-[#000000B2] z-10" />
         <AnimatedImage
           src="/background/about_back.jpg"
@@ -23,21 +33,22 @@ const AboutUs = () => {
           width={1920}
           height={500}
           className="object-cover w-full h-full"
-          effect="zoom-in"
+          effect="parallax"
+          parallaxStrength={7}
           duration={1.5}
         />
-        <div className="absolute inset-0 z-20 flex flex-col justify-center items-center text-center px-4 md:px-6">
+        <div className="absolute inset-0 z-20 flex flex-col justify-center items-center text-center px-2 md:px-6">
           <AnimatedWords
             text="About Us"
             tag="h1"
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
+            className="text-xl md:text-3xl lg:text-4xl font-bold text-white mb-3 md:mb-4"
             delay={0.3}
             staggerDelay={0.03}
           />
           <AnimatedWords
             text="Simplifying technology for everyday living"
             tag="p"
-            className="text-white/80 text-xl max-w-3xl"
+            className="text-white/80 text-sm md:text-lg max-w-3xl"
             delay={0.6}
             staggerDelay={0.01}
           />
@@ -45,14 +56,14 @@ const AboutUs = () => {
       </section>
 
       {/* Company Overview Section */}
-      <section className="py-16 container px-4 md:px-6">
+      <section className="py-12 container px-4 md:px-6">
         <AnimatedSection type="fade-up">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <SectionTitle title="Who We Are" />
           </div>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <AnimatedSection type="slide-right" delay={0.2}>
             <AnimatedImage
               src="/sortech-logos/s-logo-tealback.jpg"
@@ -94,8 +105,17 @@ const AboutUs = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 bg-brand-gray-50">
-        <div className="container px-4 md:px-6">
+      <section className="py-12 md:py-16 bg-brand-gray-50 relative overflow-hidden">
+        {/* Pattern background for branding */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <PatternBackground
+            spacing={50}
+            backgroundColor="transparent"
+            vectorColor="#B7D3D3"
+            style={{ opacity: 0.13 }}
+          />
+        </div>
+        <div className="container px-2 md:px-6 relative z-10">
           <AnimatedSection type="fade-up">
             <div className="text-center mb-12">
               <SectionTitle title="Our Core Values" />
@@ -127,7 +147,7 @@ const AboutUs = () => {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="py-16 container px-4 md:px-6">
+      <section className="py-16 container px-2 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <AnimatedSection type="slide-right" delay={0.1}>
             <AnimatedCard className="bg-white p-8 rounded-[25px] shadow-md border border-gray-100" hoverEffect="lift">
@@ -188,7 +208,7 @@ const AboutUs = () => {
 
       {/* Solutions Section */}
       <section className="py-16 bg-brand-gray-50">
-        <div className="container px-4 md:px-6">
+        <div className="container px-2 md:px-6">
           <AnimatedSection type="fade-up">
             <div className="text-center mb-12">
               <SectionTitle title="Our Solutions" />
@@ -257,7 +277,7 @@ const AboutUs = () => {
       </section>
 
       {/* CTA Banner */}
-      <section className="py-16 container px-4 md:px-6">
+      <section className="py-16 container px-2 md:px-6">
         <AnimatedSection type="fade-up">
           <CTABanner
             title="Partner With Us"
@@ -271,7 +291,7 @@ const AboutUs = () => {
 
       {/* Contact Section */}
       {/* <section className="py-16">
-        <div className="container px-4 md:px-6 text-center">
+        <div className="container px-2 md:px-6 text-center">
           <AnimatedSection type="fade-up">
             <SectionTitle title="Contact Us" />
             <AnimatedWords

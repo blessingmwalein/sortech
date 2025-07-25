@@ -13,10 +13,22 @@ const config: Config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1rem",
       screens: {
         "2xl": "1400px",
       },
+    },
+    fontSize: {
+      'xs': '0.75rem',
+      'sm': '0.875rem', 
+      'base': '0.875rem', // Reduced from default 1rem
+      'lg': '1rem',      // Reduced from default 1.125rem
+      'xl': '1.125rem',  // Reduced from default 1.25rem
+      '2xl': '1.25rem',  // Reduced from default 1.5rem
+      '3xl': '1.5rem',   // Reduced from default 1.875rem
+      '4xl': '1.875rem', // Reduced from default 2.25rem
+      '5xl': '2.25rem',  // Reduced from default 3rem
+      '6xl': '2.5rem',   // Reduced from default 3.75rem
     },
     extend: {
       colors: {

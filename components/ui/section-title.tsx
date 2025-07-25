@@ -7,7 +7,7 @@ export default function SectionTitle({ title }: SectionTitleProps) {
   const normalText = rest.join(' ')
 
   return (
-    <h2 className="text-3xl font-bold mb-2">
+    <h2 className="text-2xl font-bold mb-2">
       {boldText} <span className="font-normal">{normalText}</span>
     </h2>
   )

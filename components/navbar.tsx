@@ -16,15 +16,15 @@ export default function Navbar() {
   const isActive = (path: string) => pathname === path
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white py-4 ">
-      <div className="w-full max-w-screen-2xl flex h-16 items-center justify-between px-0 container">
+    <header className="sticky top-0 z-50 w-full bg-white py-2 ">
+      <div className="w-full max-w-screen-2xl flex h-12 items-center justify-between px-0 container">
         {/* Logo */}
         <Link href="/" className=" flex items-center">
           <Image
             src="/sortech-logos/s-logo-teal.png"
             alt="Modern home with smart technology"
-            width={270}
-            height={100}
+            width={220}
+            height={80}
           />
         </Link>
 
@@ -49,6 +49,12 @@ export default function Navbar() {
             Solutions
           </Link>
           <Link
+            href="/product-brochures"
+            className={`text-sm font-medium hover:underline ${isActive("/product-brochures") ? "nav-text-selected" : "nav-text-unselected"}`}
+          >
+            Product Brochures
+          </Link>
+          <Link
             href="/contact-us"
             className={`text-sm font-medium hover:underline ${isActive("/contact-us") ? "nav-text-selected" : "nav-text-unselected"}`}
           >
@@ -57,9 +63,9 @@ export default function Navbar() {
         </nav>
 
         {/* Get Quote + Mobile Menu */}
-        <div className="flex items-center justify-end gap-4 mr-4">
+        <div className="flex items-center justify-end gap-2 mr-2">
           <Link href="/contact-us">
-            <Button className="mr-2 rounded-full bg-white text-teal border-2 border-teal hover:bg-teal hover:text-white py-6 px-8 text-[18px]">
+            <Button className="mr-2 rounded-full bg-white text-teal border-2 border-teal hover:bg-teal hover:text-white py-3 px-4 text-medium">
               Get Quote
             </Button>
           </Link>
@@ -94,6 +100,13 @@ export default function Navbar() {
                   onClick={() => setIsOpen(false)}
                 >
                   Solutions
+                </Link>
+                <Link
+                  href="/product-brochures"
+                  className={`text-lg font-medium hover:text-teal ${isActive("/product-brochures") ? "nav-text-selected" : "nav-text-unselected"}`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  Product Brochures
                 </Link>
                 <Link
                   href="/contact-us"

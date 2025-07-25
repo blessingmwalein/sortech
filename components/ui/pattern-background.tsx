@@ -29,12 +29,11 @@ export const PatternBackground: React.FC<PatternBackgroundProps> = ({
 
   useEffect(() => {
     const updateDimensions = () => {
-      if (containerRef.current) {
-        setDimensions({
-          width: containerRef.current.offsetWidth,
-          height: containerRef.current.offsetHeight,
-        })
-      }
+      // Use viewport dimensions directly for full coverage
+      const width = window.innerWidth
+      const height = window.innerHeight
+
+      setDimensions({ width, height })
     }
 
     // Initial dimensions
@@ -45,17 +44,15 @@ export const PatternBackground: React.FC<PatternBackgroundProps> = ({
     return () => window.removeEventListener("resize", updateDimensions)
   }, [])
 
-  // Calculate how many vectors we need based on container size and spacing
+  // Calculate how many vectors we need based on viewport size and spacing
   const actualSpacing = patternSpacing + spacing
-  const columns = Math.ceil(dimensions.width / actualSpacing) + 1
-  const rows = Math.ceil(dimensions.height / actualSpacing) + 1
+  // Add extra buffer to ensure full coverage on all screen sizes
+  const columns = Math.ceil(dimensions.width / actualSpacing) + 3
+  const rows = Math.ceil(dimensions.height / actualSpacing) + 3
 
   // Generate pattern grid
   const renderPattern = () => {
     const patterns = []
-    // Calculate actual spacing with the additional spacing value
-    const actualSpacing = patternSpacing + spacing
-
     // Calculate scale factor based on spacing if scaleWithSpacing is true
     const scaleFactor = scaleWithSpacing ? baseScale * (1 + spacing / 100) : baseScale
 
@@ -82,11 +79,11 @@ export const PatternBackground: React.FC<PatternBackgroundProps> = ({
   return (
     <div
       ref={containerRef}
-      className={`relative overflow-hidden  ${className}`}
+      className={`absolute inset-0 overflow-hidden ${className}`}
       style={{
         backgroundColor,
-        width: "100%",
-        height: "100%",
+        width: "100vw",
+        height: "100vh",
         ...style,
       }}
     >
@@ -95,7 +92,13 @@ export const PatternBackground: React.FC<PatternBackgroundProps> = ({
         height="100%"
         viewBox={`0 0 ${dimensions.width} ${dimensions.height}`}
         preserveAspectRatio="xMidYMid slice"
-        style={{ position: "absolute", top: 0, left: 0 }}
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+        }}
       >
         {renderPattern()}
       </svg>

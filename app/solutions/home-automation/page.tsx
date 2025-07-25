@@ -8,12 +8,22 @@ import AnimatedWords from "@/components/ui/animated-words"
 import AnimatedImage from "@/components/ui/animated-image"
 import AnimatedCard from "@/components/ui/animated-card"
 import CTABanner from "@/components/ui/cta-banner"
+import { PatternBackground } from "@/components/ui/pattern-background"
 
 export default function HomeAutomation() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section - Keeping the original structure */}
-      <section className="relative h-[500px] w-full">
+      <section className="relative h-[300px] md:h-[500px] w-full overflow-hidden">
+        {/* Pattern background overlay for branding */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <PatternBackground
+            spacing={40}
+            backgroundColor="transparent"
+            vectorColor="#E0F2F2"
+            style={{ opacity: 0.22 }}
+          />
+        </div>
         <div className="absolute inset-0 bg-black/50 z-10" />
         <AnimatedImage
           src="/background/home_2.png"
@@ -22,127 +32,139 @@ export default function HomeAutomation() {
           height={500}
           className="w-full h-full"
           imageClassName="w-full h-full object-cover"
-          effect="zoom-in"
+          effect="parallax"
+          parallaxStrength={7}
           duration={1.5}
         />
         <PageHero subtitle="Sortech" title="Home Automation" buttonText="Learn More" />
       </section>
 
       {/* Overview Section - Enhanced with animations */}
-      <section className="py-16 container px-4 md:px-6">
-        <AnimatedSection type="fade-up">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <SectionTitle title="Smart Home Solutions" />
-            <AnimatedWords
-              text="Our Smart Home solution coordinates the technology in your life into complete, brilliant experiences that fit your lifestyle and are easy for your family to enjoy."
-              className="text-gray-600 mt-4"
-              delay={0.2}
-              staggerDelay={0.01}
-            />
-            <AnimatedWords
-              text="With one touch, dim the lights, play music, turn up the heat, lock the doors and arm the security system. Or, have your house respond to your schedule and needs without touching anything at all."
-              className="text-gray-600 mt-4"
-              delay={0.4}
-              staggerDelay={0.01}
-            />
-          </div>
-        </AnimatedSection>
-
-        {/* Features - Enhanced with animations */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-20">
-          <AnimatedSection type="slide-right" delay={0.1}>
-            <AnimatedImage
-              src="/background/enter_1.jpg"
-              alt="Smart home tablet interface"
-              width={600}
-              height={400}
-              className="rounded-[25px] shadow-md w-full h-full object-cover"
-              effect="reveal"
-            />
-          </AnimatedSection>
-
-          <AnimatedSection type="slide-left" delay={0.3}>
-            <div className="space-y-8">
-              <div>
-                <AnimatedText
-                  text="Entertainment"
-                  tag="h3"
-                  className="text-xl font-semibold mb-2 text-brand-teal"
-                  delay={0.1}
-                />
-                <AnimatedWords
-                  text="Entertainment is more than just watching TV. It's having music and video in just one room or throughout your entire home. Our technology delivers exceptional entertainment experiences across popular brands such as Sonos, Apple TV, Roku and so much more, ensuring your automation system works with the products you already have and love."
-                  className="text-gray-600"
-                  delay={0.2}
-                  staggerDelay={0.01}
-                />
-              </div>
-              <div>
-                <AnimatedWords
-                  text="Smart Lighting"
-                  tag="h3"
-                  className="text-xl font-semibold mb-2 text-brand-teal"
-                  delay={0.3}
-                />
-                <AnimatedWords
-                  text="Whether for a new home or upgrading an existing home, we offer a variety of smart switches that are elegant and energy efficient, and with a variety of colors and finishes, they complement the decor of any home."
-                  className="text-gray-600"
-                  delay={0.4}
-                  staggerDelay={0.01}
-                />
-              </div>
-            </div>
-          </AnimatedSection>
+      <section className="py-12 md:py-16 container px-2 md:px-6 relative overflow-hidden">
+        {/* Pattern background overlay for branding */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <PatternBackground
+            spacing={50}
+            backgroundColor="transparent"
+            vectorColor="#B7D3D3"
+            style={{ opacity: 0.13 }}
+          />
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-          {/* Left content column */}
-          <AnimatedSection type="slide-right" delay={0.1} className="order-2 md:order-1">
-            <div className="space-y-8">
-              <div>
-                <AnimatedWords
-                  text="Comfort and Convenience"
-                  tag="h3"
-                  className="text-xl font-semibold mb-2 text-brand-teal"
-                  delay={0.1}
-                />
-                <AnimatedWords
-                  text="We can help you deliver the right level of comfort in your home. We integrate shades, pool and spa control, and fireplace switches to bring a new level of comfort to your smart home. Door stations keep you connected to your home from anywhere."
-                  className="text-gray-600"
-                  delay={0.2}
-                  staggerDelay={0.01}
-                />
-              </div>
-              <div>
-                <AnimatedWords
-                  text="Safety and Security"
-                  tag="h3"
-                  className="text-xl font-semibold mb-2 text-brand-teal"
-                  delay={0.3}
-                />
-                <AnimatedWords
-                  text="By integrating with the leading brands in security cameras, NVRs, smart locks, and sensors, you can monitor your house 24/7 and be notified immediately if a door opens, the water heater leaks, or if you left the garage door open."
-                  className="text-gray-600"
-                  delay={0.4}
-                  staggerDelay={0.01}
-                />
-              </div>
+        <div className="relative z-10">
+          <AnimatedSection type="fade-up">
+            <div className="max-w-3xl mx-auto text-center mb-16">
+              <SectionTitle title="Smart Home Solutions" />
+              <AnimatedWords
+                text="Our Smart Home solution coordinates the technology in your life into complete, brilliant experiences that fit your lifestyle and are easy for your family to enjoy."
+                className="text-gray-600 mt-4"
+                delay={0.2}
+                staggerDelay={0.01}
+              />
+              <AnimatedWords
+                text="With one touch, dim the lights, play music, turn up the heat, lock the doors and arm the security system. Or, have your house respond to your schedule and needs without touching anything at all."
+                className="text-gray-600 mt-4"
+                delay={0.4}
+                staggerDelay={0.01}
+              />
             </div>
           </AnimatedSection>
 
-          {/* Right image column */}
-          <AnimatedSection type="slide-left" delay={0.3} className="order-1 md:order-2">
-            <AnimatedImage
-              src="/background/comfort_1.jpg"
-              alt="Smart home security app"
-              width={600}
-              height={400}
-              className="rounded-[25px] shadow-md w-full h-full object-cover"
-              imageClassName="w-full h-full object-cover" 
+          {/* Features - Enhanced with animations */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-20">
+            <AnimatedSection type="slide-right" delay={0.1}>
+              <AnimatedImage
+                src="/background/enter_1.jpg"
+                alt="Smart home tablet interface"
+                width={600}
+                height={400}
+                className="rounded-[25px] shadow-md w-full h-full object-cover"
+                effect="reveal"
+              />
+            </AnimatedSection>
 
-              effect="reveal"
-            />
-          </AnimatedSection>
+            <AnimatedSection type="slide-left" delay={0.3}>
+              <div className="space-y-8">
+                <div>
+                  <AnimatedText
+                    text="Entertainment"
+                    tag="h3"
+                    className="text-xl font-semibold mb-2 text-brand-teal"
+                    delay={0.1}
+                  />
+                  <AnimatedWords
+                    text="Entertainment is more than just watching TV. It's having music and video in just one room or throughout your entire home. Our technology delivers exceptional entertainment experiences across popular brands such as Sonos, Apple TV, Roku and so much more, ensuring your automation system works with the products you already have and love."
+                    className="text-gray-600"
+                    delay={0.2}
+                    staggerDelay={0.01}
+                  />
+                </div>
+                <div>
+                  <AnimatedWords
+                    text="Smart Lighting"
+                    tag="h3"
+                    className="text-xl font-semibold mb-2 text-brand-teal"
+                    delay={0.3}
+                  />
+                  <AnimatedWords
+                    text="Whether for a new home or upgrading an existing home, we offer a variety of smart switches that are elegant and energy efficient, and with a variety of colors and finishes, they complement the decor of any home."
+                    className="text-gray-600"
+                    delay={0.4}
+                    staggerDelay={0.01}
+                  />
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+            {/* Left content column */}
+            <AnimatedSection type="slide-right" delay={0.1} className="order-2 md:order-1">
+              <div className="space-y-8">
+                <div>
+                  <AnimatedWords
+                    text="Comfort and Convenience"
+                    tag="h3"
+                    className="text-xl font-semibold mb-2 text-brand-teal"
+                    delay={0.1}
+                  />
+                  <AnimatedWords
+                    text="We can help you deliver the right level of comfort in your home. We integrate shades, pool and spa control, and fireplace switches to bring a new level of comfort to your smart home. Door stations keep you connected to your home from anywhere."
+                    className="text-gray-600"
+                    delay={0.2}
+                    staggerDelay={0.01}
+                  />
+                </div>
+                <div>
+                  <AnimatedWords
+                    text="Safety and Security"
+                    tag="h3"
+                    className="text-xl font-semibold mb-2 text-brand-teal"
+                    delay={0.3}
+                  />
+                  <AnimatedWords
+                    text="By integrating with the leading brands in security cameras, NVRs, smart locks, and sensors, you can monitor your house 24/7 and be notified immediately if a door opens, the water heater leaks, or if you left the garage door open."
+                    className="text-gray-600"
+                    delay={0.4}
+                    staggerDelay={0.01}
+                  />
+                </div>
+              </div>
+            </AnimatedSection>
+
+            {/* Right image column */}
+            <AnimatedSection type="slide-left" delay={0.3} className="order-1 md:order-2">
+              <AnimatedImage
+                src="/background/comfort_1.jpg"
+                alt="Smart home security app"
+                width={600}
+                height={400}
+                className="rounded-[25px] shadow-md w-full h-full object-cover"
+                imageClassName="w-full h-full object-cover" 
+
+                effect="reveal"
+              />
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 
