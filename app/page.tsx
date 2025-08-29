@@ -86,10 +86,10 @@ export default function Home() {
     setCurrentSlide(index)
   }
   return (
-    <div className="flex flex-col min-h-screen px-10">
+    <div className="flex flex-col min-h-screen mobile-px-2 md:px-6 lg:px-10">
       {/* Hero Section - Responsive Slider */}
       <section className="pb-20 mt-6 relative z-10">
-        <div className="relative aspect-[4/3] sm:aspect-[16/7] md:aspect-[2/1] lg:aspect-[5/2] rounded-[25px] overflow-hidden">
+        <div className="relative aspect-[4/3] sm:aspect-[16/9] md:aspect-[16/7] lg:aspect-[5/2] rounded-[15px] sm:rounded-[25px] overflow-hidden">
           {/* Slider Images */}
           {heroSlides.map((slide, index) => (
             <div
@@ -115,37 +115,37 @@ export default function Home() {
           <div className="absolute inset-0 bg-[#0000005d] z-10" />
 
           {/* Content */}
-          <div className="absolute inset-0 z-20 flex flex-col justify-center items-start text-left px-4 sm:px-8 lg:px-12">
-            <div className="max-w-2xl">
+          <div className="absolute inset-0 z-20 flex flex-col justify-center items-start text-left px-3 sm:px-6 md:px-8 lg:px-12">
+            <div className="max-w-xl sm:max-w-2xl">
               <AnimatedWords
                 text="Simplifying Your Everyday Living"
                 tag="p"
-                className="text-white/80 mb-2 text-sm sm:text-base md:text-lg"
+                className="text-white/80 mb-1 sm:mb-2 mobile-text-sm"
                 delay={0.3}
               />
               <AnimatedText
                 text={heroSlides[currentSlide].title}
                 tag="h1"
-                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2"
+                className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-1 sm:mb-2 leading-tight"
                 delay={0.5}
                 staggerDelay={0.03}
               />
               <AnimatedText
                 text={heroSlides[currentSlide].subtitle}
                 tag="h2"
-                className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4"
+                className="text-base sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 sm:mb-4 leading-tight"
                 delay={0.8}
                 staggerDelay={0.03}
               />
               <AnimatedSection type="fade-up" delay={1.0}>
-                <p className="text-white/90 mb-6 text-sm sm:text-base max-w-lg">
+                <p className="text-white/90 mb-4 sm:mb-6 mobile-text-sm max-w-sm sm:max-w-lg leading-relaxed">
                   {heroSlides[currentSlide].description}
                 </p>
               </AnimatedSection>
               <AnimatedSection type="fade-up" delay={1.2}>
                 <AnimatedButton
                   onClick={heroSlides[currentSlide].buttonAction}
-                  className="bg-transparent hover:bg-white/10 text-white rounded-full border-2 border-white px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base transition-all duration-300"
+                  className="bg-transparent hover:bg-white/10 text-white rounded-full border-2 border-white px-3 sm:px-4 md:px-6 py-2 sm:py-3 mobile-text-sm transition-all duration-300"
                   hoverEffect="glow"
                 >
                   {heroSlides[currentSlide].buttonText}
@@ -190,9 +190,9 @@ export default function Home() {
         </div>
       </section>
       {/* Features Section with Overlap - Specialization Areas */}
-      <section className=" -mt-38 relative z-20 ">
-        <div className=" mx-5 ">
-          <div className="flex flex-wrap justify-center gap-3 xl:gap-3 xl:flex-nowrap">
+      <section className="  relative z-20">
+        <div className="mx-2 sm:mx-1 md:mx-1">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 xl:gap-3 xl:flex-nowrap">
             {[
               {
                 icon: <SmartphoneIcon className="w-32 h-32" />,
@@ -227,23 +227,23 @@ export default function Home() {
             ].map(({ icon, title, text, delay }, index) => (
               <AnimatedSection key={index} type="fade-up" delay={delay}>
                 <AnimatedCard
-                  className="relative bg-brand-teal w-[260px] xl:w-[280px] h-[280px] rounded-[25px] overflow-hidden shadow-xl border-3 border-white group flex-shrink-0"
+                  className="relative bg-brand-teal w-full max-w-[280px] sm:w-[260px] xl:w-[280px] h-[260px] sm:h-[280px] rounded-[20px] sm:rounded-[25px] overflow-hidden shadow-xl border-3 border-white group flex-shrink-0"
                   hoverEffect="lift"
                 >
                   {/* Large cutout icon as background - white color */}
-                  <div className="absolute -top-8 -right-8 text-white/15 group-hover:text-white/25 transition-colors duration-300">
-                    {index === 0 && <SmartphoneIcon className="w-48 h-48" />}
-                    {index === 1 && <ShieldIcon className="w-48 h-48" />}
-                    {index === 2 && <LockIcon className="w-48 h-48" />}
-                    {index === 3 && <CheckCircle className="w-48 h-48" />}
-                    {index === 4 && <MonitorIcon className="w-48 h-48" />}
+                  <div className="absolute -top-6 sm:-top-8 -right-6 sm:-right-8 text-white/15 group-hover:text-white/25 transition-colors duration-300">
+                    {index === 0 && <SmartphoneIcon className="w-40 sm:w-48 h-40 sm:h-48" />}
+                    {index === 1 && <ShieldIcon className="w-40 sm:w-48 h-40 sm:h-48" />}
+                    {index === 2 && <LockIcon className="w-40 sm:w-48 h-40 sm:h-48" />}
+                    {index === 3 && <CheckCircle className="w-40 sm:w-48 h-40 sm:h-48" />}
+                    {index === 4 && <MonitorIcon className="w-40 sm:w-48 h-40 sm:h-48" />}
                   </div>
 
                   {/* Content overlay */}
-                  <div className="relative z-10 p-6 h-full flex flex-col justify-center">
+                  <div className="relative z-10 p-4 sm:p-6 h-full flex flex-col justify-center">
                     <div>
-                      <h3 className="text-xl font-bold text-white mb-4 leading-tight">{title}</h3>
-                      <p className="text-white/90 text-sm leading-relaxed">{text}</p>
+                      <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4 leading-tight">{title}</h3>
+                      <p className="text-white/90 mobile-text-sm leading-relaxed">{text}</p>
                     </div>
                   </div>
 
@@ -304,11 +304,11 @@ export default function Home() {
       </section> */}
 
       {/* About Section - Matching Design */}
-      <section className="py-16 ">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="section-spacing">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Left Side - Image with Smart Home Interface Overlay */}
           <AnimatedSection type="slide-right">
-            <div className="relative h-[500px] rounded-[25px] overflow-hidden">
+            <div className="relative h-[400px] sm:h-[450px] lg:h-[500px] rounded-[20px] sm:rounded-[25px] overflow-hidden">
               <AnimatedImage
                 src="/background/home/future.jpeg"
                 alt="Smart home interface"
@@ -437,45 +437,45 @@ export default function Home() {
 
           {/* Right Side - Content Card matching the design */}
           <AnimatedSection type="slide-left">
-            <div className="bg-white p-8 rounded-[25px] shadow-xl border border-gray-100">
+            <div className="bg-white p-6 sm:p-8 rounded-[20px] sm:rounded-[25px] shadow-xl border border-gray-100">
               <AnimatedWords
                 text="Who We Are"
                 tag="h2"
-                className="text-4xl font-bold mb-2 text-gray-900"
+                className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 text-gray-900 leading-tight"
                 delay={0.2}
                 staggerDelay={0.02}
               />
               <AnimatedWords
                 text="And What You"
                 tag="h2"
-                className="text-4xl font-bold mb-2 text-gray-900"
+                className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 text-gray-900 leading-tight"
                 delay={0.4}
                 staggerDelay={0.02}
               />
               <AnimatedWords
                 text="Get From Us"
                 tag="h2"
-                className="text-4xl font-bold mb-6 text-gray-900"
+                className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-gray-900 leading-tight"
                 delay={0.6}
                 staggerDelay={0.02}
               />
 
               <AnimatedSection type="fade-up" delay={0.8}>
-                <p className="text-gray-600 mb-6 text-base leading-relaxed">
+                <p className="text-gray-600 mb-4 sm:mb-6 mobile-text-sm leading-relaxed">
                   We specialize in cyber security, data privacy, home automation solutions and infrastructure management services.
                 </p>
 
-                <p className="text-gray-600 mb-6 text-base leading-relaxed">
+                <p className="text-gray-600 mb-4 sm:mb-6 mobile-text-sm leading-relaxed">
                   Sortech Private Limited is a technology company formed in August 2024. We bridge the gap in both Zimbabwean consumer and commercial markets for cost-effective technology solutions.
                 </p>
 
                 <AnimatedButton
                   onClick={() => router.push('/about-us')}
-                  className="bg-brand-teal text-white hover:bg-teal-700 rounded-full px-8 py-3 font-semibold transition-all inline-flex items-center gap-2"
+                  className="bg-brand-teal text-white hover:bg-teal-700 rounded-full px-6 sm:px-8 py-2 sm:py-3 font-semibold transition-all inline-flex items-center gap-2 mobile-text-sm"
                   hoverEffect="glow"
                 >
                   Learn More
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
                 </AnimatedButton>
               </AnimatedSection>
             </div>
@@ -535,12 +535,12 @@ export default function Home() {
           ))}
         </div>
       </section> */}
-      <section className="py-12 relative overflow-hidden">
+      <section className="section-spacing-sm relative overflow-hidden">
         <SectionTitle title="Industries Served." />
 
-        <div className="md:px-6 py-6 relative z-10">
+        <div className="mobile-px-2 py-4 sm:py-6 relative z-10">
 
-          <div className="flex flex-wrap gap-4 justify-center mt-6">
+          <div className="flex flex-wrap gap-2 sm:gap-4 justify-center mt-4 sm:mt-6">
             {[
               "Banking & Finance",
               "Telecommunications",
@@ -552,7 +552,7 @@ export default function Home() {
               "Energy and Utilities",
               "Healthcare",
             ].map((industry) => (
-              <div key={industry} className="bg-[#B7D3D3] px-4 py-2 rounded-full text-black text-lg">
+              <div key={industry} className="bg-[#B7D3D3] px-3 sm:px-4 py-2 rounded-full text-black mobile-text-sm">
                 {industry}
               </div>
             ))}
@@ -562,12 +562,12 @@ export default function Home() {
 
 
       {/* Product Categories */}
-      <section className="py-12  ">
-        <h4 className="text-lg font-normal mb-2 text-brand-teal">Our Solutions</h4>
+      <section className="section-spacing-sm">
+        <h4 className="mobile-text-base font-normal mb-2 text-brand-teal">Our Solutions</h4>
         <SectionTitle title="Product Categories." />
 
         {/* Category Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mt-6 sm:mt-8">
           {[
             {
               key: "home-automation",
@@ -606,7 +606,7 @@ export default function Home() {
               ],
             },
           ].map((cat) => (
-            <div key={cat.key} className={`relative h-[400px] rounded-[30px] overflow-hidden group cursor-pointer border-3 transition-all duration-300 ${activeCategory === cat.key
+            <div key={cat.key} className={`relative h-[320px] sm:h-[380px] md:h-[400px] rounded-[25px] sm:rounded-[30px] overflow-hidden group cursor-pointer border-3 transition-all duration-300 ${activeCategory === cat.key
               ? 'border-brand-teal shadow-lg scale-105'
               : 'border-transparent hover:border-brand-teal/50'
               }`}
@@ -624,22 +624,22 @@ export default function Home() {
                 height={400}
                 className="object-cover w-full h-full"
               />
-              <div className={`absolute inset-0 flex items-end p-4 transition-all duration-300 ${activeCategory === cat.key
+              <div className={`absolute inset-0 flex items-end p-3 sm:p-4 transition-all duration-300 ${activeCategory === cat.key
                 ? 'bg-brand-teal/70'
                 : 'bg-black/50'
                 }`}>
-                <span className={`border-2 text-white px-4 py-3 rounded-full text-base font-semibold transition-all duration-300 ${activeCategory === cat.key
+                <span className={`border-2 text-white px-3 sm:px-4 py-2 sm:py-3 rounded-full mobile-text-sm font-semibold transition-all duration-300 ${activeCategory === cat.key
                   ? 'bg-white text-brand-teal border-white'
                   : 'bg-transparent border-white group-hover:bg-brand-teal'
                   }`}>
-                  {cat.title} <ArrowRight className="h-4 w-4 inline ml-1" />
+                  {cat.title} <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 inline ml-1" />
                 </span>
               </div>
 
               {/* Active indicator */}
               {activeCategory === cat.key && (
-                <div className="absolute top-4 right-4 w-6 h-6 bg-brand-teal rounded-full flex items-center justify-center">
-                  <CheckCircle className="w-4 h-4 text-white" />
+                <div className="absolute top-3 right-3 sm:top-4 sm:right-4 w-5 h-5 sm:w-6 sm:h-6 bg-brand-teal rounded-full flex items-center justify-center">
+                  <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                 </div>
               )}
             </div>
@@ -648,8 +648,8 @@ export default function Home() {
 
         {/* Active Category Details */}
         {activeCategory && (
-          <AnimatedSection type="fade-up" className="mt-12">
-            <div className=" rounded-[30px]">
+          <AnimatedSection type="fade-up" className="mt-8 sm:mt-12">
+            <div className="rounded-[25px] sm:rounded-[30px]">
               <SectionTitle
                 title={
                   [
@@ -660,13 +660,13 @@ export default function Home() {
                 }
               />
 
-              <p className="text-gray-600 mb-8">
+              <p className="text-gray-600 mb-6 sm:mb-8 mobile-text-sm leading-relaxed">
                 Explore our comprehensive offerings in this category
               </p>
 
 
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
                 {[
                   {
                     key: "home-automation",
@@ -702,17 +702,17 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="text-center mt-8">
+              <div className="text-center mt-6 sm:mt-8">
                 <Link
                   href={[
                     { key: "home-automation", link: "/solutions/home-automation" },
                     { key: "enterprise-security", link: "/solutions/enterprise-security" },
                     { key: "observability-resilience", link: "/solutions/observability-resilience" },
                   ].find(cat => cat.key === activeCategory)?.link || "#"}
-                  className="inline-flex items-center gap-2 bg-brand-teal text-white px-8 py-3 rounded-full font-semibold hover:bg-teal-700 transition-all"
+                  className="inline-flex items-center gap-2 bg-brand-teal text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold hover:bg-teal-700 transition-all mobile-text-sm"
                 >
                   Learn More About This Category
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
                 </Link>
               </div>
             </div>

@@ -19,16 +19,16 @@ const config: Config = {
       },
     },
     fontSize: {
-      'xs': '0.75rem',
-      'sm': '0.875rem', 
-      'base': '0.875rem', // Reduced from default 1rem
-      'lg': '1rem',      // Reduced from default 1.125rem
-      'xl': '1.125rem',  // Reduced from default 1.25rem
-      '2xl': '1.25rem',  // Reduced from default 1.5rem
-      '3xl': '1.5rem',   // Reduced from default 1.875rem
-      '4xl': '1.875rem', // Reduced from default 2.25rem
-      '5xl': '2.25rem',  // Reduced from default 3rem
-      '6xl': '2.5rem',   // Reduced from default 3.75rem
+      'xs': ['clamp(0.75rem, 2vw, 0.875rem)', { lineHeight: '1.2' }],
+      'sm': ['clamp(0.875rem, 2.5vw, 1rem)', { lineHeight: '1.3' }], 
+      'base': ['clamp(0.875rem, 2.5vw, 1rem)', { lineHeight: '1.4' }],
+      'lg': ['clamp(1rem, 3vw, 1.125rem)', { lineHeight: '1.4' }],
+      'xl': ['clamp(1.125rem, 3.5vw, 1.25rem)', { lineHeight: '1.4' }],
+      '2xl': ['clamp(1.25rem, 4vw, 1.5rem)', { lineHeight: '1.3' }],
+      '3xl': ['clamp(1.5rem, 4.5vw, 1.875rem)', { lineHeight: '1.2' }],
+      '4xl': ['clamp(1.875rem, 5.5vw, 2.25rem)', { lineHeight: '1.1' }],
+      '5xl': ['clamp(2.25rem, 6.5vw, 3rem)', { lineHeight: '1.1' }],
+      '6xl': ['clamp(2.5rem, 7.5vw, 3.75rem)', { lineHeight: '1' }],
     },
     extend: {
       colors: {

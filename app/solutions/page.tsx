@@ -14,12 +14,12 @@ export default function Solutions() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="py-16 container px-4 md:px-6">
+      <section className="section-spacing-sm container mobile-px-2">
         <AnimatedSection type="fade-up">
           <PageTitle title="Our Solutions" />
         </AnimatedSection>
         <AnimatedSection type="fade-up" delay={0.2}>
-          <p className="text-brand-teal text-2xl mt-6 max-w-2xl">
+          <p className="text-brand-teal text-lg sm:text-xl md:text-2xl mt-4 sm:mt-6 max-w-2xl leading-relaxed">
             Explore our comprehensive range of technology solutions designed to simplify your everyday living and
             business operations.
           </p>
@@ -28,11 +28,11 @@ export default function Solutions() {
 
       {/* Solutions Categories */}
       <section className="">
-        <div className="container px-4 md:px-6">
-          <div className="space-y-1">
+        <div className="container mobile-px-2">
+          <div className="space-y-2 sm:space-y-1">
             {/* Home Automation */}
             <AnimatedSection type="fade-up" delay={0.1}>
-              <div className="relative h-[370px] w-full overflow-hidden rounded-[20px]">
+              <div className="relative h-[280px] sm:h-[320px] md:h-[370px] w-full overflow-hidden rounded-[15px] sm:rounded-[20px]">
                 <AnimatedImage
                   src="/background/home_1.jpg"
                   alt="Home Automation"
@@ -43,19 +43,19 @@ export default function Solutions() {
                   effect="zoom-in"
                   duration={1.2}
                 />
-                <div className="absolute inset-0 bg-black/50 flex items-center p-6">
+                <div className="absolute inset-0 bg-black/50 flex items-center p-4 sm:p-6">
                   <AnimatedWords
                     text="Home Automation"
                     tag="h2"
-                    className="text-2xl md:text-3xl font-bold text-white"
+                    className="text-xl sm:text-2xl md:text-3xl font-bold text-white leading-tight"
                     delay={0.3}
                     staggerDelay={0.02}
                   />
                 </div>
-                <div className="absolute bottom-4 right-4">
+                <div className="absolute bottom-3 sm:bottom-4 right-3 sm:right-4">
                   <Link href="/solutions/home-automation">
-                    <Button className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-brand-teal hover:text-white transition-all duration-300 transform hover:scale-110">
-                      <ArrowRight className="h-6 w-6" />
+                    <Button className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-brand-teal hover:text-white transition-all duration-300 transform hover:scale-110">
+                      <ArrowRight className="h-4 w-4 sm:h-6 sm:w-6" />
                     </Button>
                   </Link>
                 </div>
@@ -64,7 +64,7 @@ export default function Solutions() {
 
             {/* Enterprise Security */}
             <AnimatedSection type="fade-up" delay={0.3}>
-              <div className="relative h-[280px] w-full overflow-hidden rounded-[20px]">
+              <div className="relative h-[240px] sm:h-[280px] w-full overflow-hidden rounded-[15px] sm:rounded-[20px]">
                 <AnimatedImage
                   src="/background/enterprice_1.jpg"
                   alt="Enterprise Security"
@@ -75,19 +75,19 @@ export default function Solutions() {
                   effect="zoom-in"
                   duration={1.2}
                 />
-                <div className="absolute inset-0 bg-black/50 flex items-center p-6">
+                <div className="absolute inset-0 bg-black/50 flex items-center p-4 sm:p-6">
                   <AnimatedWords
                     text="Enterprise Security"
                     tag="h2"
-                    className="text-2xl md:text-3xl font-bold text-white"
+                    className="text-xl sm:text-2xl md:text-3xl font-bold text-white leading-tight"
                     delay={0.3}
                     staggerDelay={0.02}
                   />
                 </div>
-                <div className="absolute bottom-4 right-4">
+                <div className="absolute bottom-3 sm:bottom-4 right-3 sm:right-4">
                   <Link href="/solutions/enterprise-security">
-                    <Button className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-brand-teal hover:text-white transition-all duration-300 transform hover:scale-110">
-                      <ArrowRight className="h-6 w-6" />
+                    <Button className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-brand-teal hover:text-white transition-all duration-300 transform hover:scale-110">
+                      <ArrowRight className="h-4 w-4 sm:h-6 sm:w-6" />
                     </Button>
                   </Link>
                 </div>
@@ -96,7 +96,7 @@ export default function Solutions() {
 
             {/* Observability And Resilience */}
             <AnimatedSection type="fade-up" delay={0.5}>
-              <div className="relative h-[280px] w-full overflow-hidden rounded-[20px]">
+              <div className="relative h-[240px] sm:h-[280px] w-full overflow-hidden rounded-[15px] sm:rounded-[20px]">
                 <AnimatedImage
                   src="/background/obser_1.jpg"
                   alt="Observability And Resilience"
@@ -107,19 +107,19 @@ export default function Solutions() {
                   effect="zoom-in"
                   duration={1.2}
                 />
-                <div className="absolute inset-0 bg-black/50 flex items-center p-6">
+                <div className="absolute inset-0 bg-black/50 flex items-center p-4 sm:p-6">
                   <AnimatedWords
                     text="Observability And Resilience"
                     tag="h2"
-                    className="text-2xl md:text-3xl font-bold text-white"
+                    className="text-xl sm:text-2xl md:text-3xl font-bold text-white leading-tight"
                     delay={0.3}
                     staggerDelay={0.02}
                   />
                 </div>
-                <div className="absolute bottom-4 right-4">
+                <div className="absolute bottom-3 sm:bottom-4 right-3 sm:right-4">
                   <Link href="/solutions/observability-resilience">
-                    <Button className="w-12 h-12 flex items-center justify-center rounded-full bg-white text-black hover:bg-brand-teal hover:text-white transition-all duration-300 transform hover:scale-110">
-                      <ArrowRight className="h-8 w-8" />
+                    <Button className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white text-black hover:bg-brand-teal hover:text-white transition-all duration-300 transform hover:scale-110">
+                      <ArrowRight className="h-4 w-4 sm:h-6 sm:w-6 md:h-8 md:w-8" />
                     </Button>
                   </Link>
                 </div>
@@ -130,16 +130,16 @@ export default function Solutions() {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container px-4 md:px-6">
+      <section className="section-spacing bg-gray-50">
+        <div className="container mobile-px-2">
           <AnimatedSection type="fade-up">
-            <div className="mb-8">
-              <h4 className="text-lg font-normal mb-2 text-brand-teal">Service Offering</h4>
+            <div className="mb-6 sm:mb-8">
+              <h4 className="mobile-text-base font-normal mb-2 text-brand-teal">Service Offering</h4>
               <SectionTitle title="Your Home. Simplified." />
             </div>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             <AnimatedSection type="fade-up" delay={0.1}>
               <NumberCard number="01" label="Observability Platform Engineering" />
             </AnimatedSection>
@@ -160,19 +160,19 @@ export default function Solutions() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 container px-4 md:px-6">
+      <section className="section-spacing container mobile-px-2">
         <AnimatedSection type="fade-up">
-          <div className="text-center mb-12">
-            <h4 className="text-lg font-normal mb-2 text-brand-teal">Why Choose Us</h4>
+          <div className="text-center mb-8 sm:mb-12">
+            <h4 className="mobile-text-base font-normal mb-2 text-brand-teal">Why Choose Us</h4>
             <SectionTitle title="The Sortech Advantage" />
           </div>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           <AnimatedSection type="fade-up" delay={0.1}>
-            <div className="bg-white p-8 rounded-[25px] shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-              <div className="bg-brand-teal/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="bg-white p-6 sm:p-8 rounded-[20px] sm:rounded-[25px] shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+              <div className="bg-brand-teal/10 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-4 sm:mb-6">
+                <svg width="20" height="20" className="sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
                     stroke="#008080"
@@ -184,8 +184,8 @@ export default function Solutions() {
                   <path d="M12 8H12.01" stroke="#008080" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Expertise</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg sm:text-xl font-semibold mb-3">Expertise</h3>
+              <p className="text-gray-600 mobile-text-sm">
                 Our team brings years of specialized experience in technology solutions, ensuring you receive the
                 highest quality service.
               </p>
@@ -193,9 +193,9 @@ export default function Solutions() {
           </AnimatedSection>
 
           <AnimatedSection type="fade-up" delay={0.3}>
-            <div className="bg-white p-8 rounded-[25px] shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-              <div className="bg-brand-teal/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="bg-white p-6 sm:p-8 rounded-[20px] sm:rounded-[25px] shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+              <div className="bg-brand-teal/10 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-4 sm:mb-6">
+                <svg width="20" height="20" className="sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"
                     stroke="#008080"
@@ -212,8 +212,8 @@ export default function Solutions() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Customized Solutions</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg sm:text-xl font-semibold mb-3">Customized Solutions</h3>
+              <p className="text-gray-600 mobile-text-sm">
                 We tailor our services to your specific needs, ensuring you get exactly what you need without
                 unnecessary extras.
               </p>
@@ -221,9 +221,9 @@ export default function Solutions() {
           </AnimatedSection>
 
           <AnimatedSection type="fade-up" delay={0.5}>
-            <div className="bg-white p-8 rounded-[25px] shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-              <div className="bg-brand-teal/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="bg-white p-6 sm:p-8 rounded-[20px] sm:rounded-[25px] shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+              <div className="bg-brand-teal/10 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-4 sm:mb-6">
+                <svg width="20" height="20" className="sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M17 18C17 16.6739 16.4732 15.4021 15.5355 14.4645C14.5979 13.5268 13.3261 13 12 13C10.6739 13 9.40215 13.5268 8.46447 14.4645C7.52678 15.4021 7 16.6739 7 18"
                     stroke="#008080"
@@ -247,8 +247,8 @@ export default function Solutions() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Dedicated Support</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg sm:text-xl font-semibold mb-3">Dedicated Support</h3>
+              <p className="text-gray-600 mobile-text-sm">
                 Our team provides ongoing support and maintenance to ensure your systems continue to operate at peak
                 performance.
               </p>
@@ -258,7 +258,7 @@ export default function Solutions() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 container px-4 md:px-6">
+      <section className="section-spacing container mobile-px-2">
         <AnimatedSection type="fade-up">
           <ContactForm />
         </AnimatedSection>
